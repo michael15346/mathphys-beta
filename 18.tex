@@ -12,7 +12,7 @@
 	\begin{aligned}
 		\int a_n (x) yzdx = \int a_n (x) yzdx, \\
 		\int a_{n-1} (x) y'zdx = a_{n-1} (x) zy - \int y(a_{n-1} (x)z)'dx \\
-		\int a_{n-2} (x) y''z = a_{n-2}(x) zy' - \int (a_{n-2} (x)z)' y' = \\
+		\int a_{n-2} (x) y''zdx = a_{n-2}(x) zy' - \int (a_{n-2} (x)z)' y' = \\
 		= a_{n-2} (x) zy' - (a_{n-2} (x) z)'y + \int y(a_{n-2}(x)z)''dx \\
 		\dots \\
 		\int a_1 (x) y^{(n-1)}zdx = a_1 (x)zy^{(n-2)} - (a_1(x)z)'y^{(n-3)}+(a_1(x)z)''y^{(n-4)} + \dots \\
@@ -86,7 +86,7 @@
 \[
 	\begin{aligned}
 		b_{n-1} = a_0 (x) \overline{z}, b_{n-2} = a_1 (x) \overline{z} - \left(a_0(x) \overline{z} \right)', \dots, \\
-		b_0 = a_{n-1} (x) \overline{z} - (a_{n-2} (x) z)' + \dots + (-1)^{n-1} \left( a_0(x) \overline{z}\right)^{(n-1)}
+		b_0 = a_{n-1} (x) \overline{z} - \left(a_{n-2} (x) \overline{z}\right)' + \dots + (-1)^{n-1} \left( a_0(x) \overline{z}\right)^{(n-1)}
 	\end{aligned},
 \]
 т.е. $\Psi_1[y] = \Psi \left[ y, \overline{z}\right]$, и равенство (2\textquotesingle \textquotesingle \textquotesingle) даёт: $M\left[ \overline{z}\right]=0$.
@@ -113,7 +113,7 @@
 \]
 его решение
 \[
-	\overline{z} = e^{\int p(x)dx}	
+	\overline{z} = e^{\int P(x)dx}	
 \]
 будет множителем данного уравнения.
 
@@ -146,7 +146,7 @@
 \]
 Рассмотрим линейное дифференциальное выражение второго порядка
 \[
-	Mu = \sum_{\alpha,\beta=1}^3 a_{\alpha\beta} \frac{\partial^2 u}{\partial x_\alpha}{\partial x_\beta} + \sum_{\alpha=1}^3 b_\alpha \frac{\partial u}{\partial x_\alpha} + cu, \tag{6}
+	Mu = \sum_{\alpha,\beta=1}^3 a_{\alpha\beta} \frac{\partial^2 u}{\partial x_\alpha\partial x_\beta} + \sum_{\alpha=1}^3 b_\alpha \frac{\partial u}{\partial x_\alpha} + cu, \tag{6}
 \]
 где $a_{\alpha\beta}, b_\alpha, c$ - некоторые функции $x_1, x_2, x_3$. Если функции $a_{\alpha\beta}$, а также функции
 \[
@@ -154,7 +154,7 @@
 \]
 имеют непрерывные первые производные, то дифференциальному выражению $Mu$ можно придать вид
 \[
-	Mu = \sum_{\alpha,\beta=1}^3\frac{\partial}{\partial x_\alpha} a_{\alpha \beta} \frac{\partial u}{\partial x_\beta} + \sum_{\alpha=1}^3 e_\alpha \frac{\partial u}{\partial x_\alpha} + Cu \tag{8}
+	Mu = \sum_{\alpha,\beta=1}^3\frac{\partial}{\partial x_\beta} a_{\alpha \beta} \frac{\partial u}{\partial x_\alpha} + \sum_{\alpha=1}^3 e_\alpha \frac{\partial u}{\partial x_\alpha} + Cu \tag{8}
 \]
 Найдём функцию $v(x_1,x_2,x_3)$, при умножении на которую выражение $Mu$ выражение $vMu$ может быть представлено в виде суммы частных производных первого порядка по $x_1, x_2, x_3$.
 
